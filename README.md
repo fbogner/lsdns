@@ -2,11 +2,14 @@
 lsdns queries a DNS server for all host names within a given IP range. The result is printed as a list of comma separated values for further processing.
 
 # Usage
+```
 ./lsdns.py <dns server to query> <IP address or range>
 
 Example: ./lsdns.py 8.8.8.8 148.198.1.0/24
+```
 
 # Sample Output
+```
 148.198.1.84,ns1.kapsch.net
 148.198.1.85,ns2.kapsch.net
 148.198.1.87,vitatv.kapsch.net
@@ -22,3 +25,4 @@ Example: ./lsdns.py 8.8.8.8 148.198.1.0/24
 148.198.1.214,profilesftp.kapschcarrier.com
 148.198.1.228,cumulus.kapsch.net.1.198.148.in-addr.arpa
 148.198.1.230,servicetest.kapschbusiness.com
+```
