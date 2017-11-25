@@ -1,4 +1,4 @@
-#!env python
+#!/usr/bin/python
 
 import sys
 
@@ -45,11 +45,11 @@ my_hosts=None
 # parse given IP address or range
 try: 
 		# try to convert the given string to a network
-		my_hosts=list(ipaddress.ip_network(sys.argv[2]).hosts())
+		my_hosts=list(ipaddress.ip_network(sys.argv[2].decode("utf-8")).hosts())
 		
 		# if the resulting network contains no hosts this indicates that a single ip adress was given => let's try to parse that
 		if len(my_hosts) == 0:
-			my_hosts.append(ipaddress.ip_address(sys.argv[2]))
+			my_hosts.append(ipaddress.ip_address(sys.argv[2].decode("utf-8")))
 		
 except:
 	sys.stderr.write("The given IP address or range could not be parsed.\n")
